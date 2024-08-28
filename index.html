@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">Car Hub</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cars">Cars</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-text">
+            <h1>Book Your Dream Car</h1>
+            <p>Choose from a wide range of luxury and budget-friendly cars.</p>
+            <a href="#cars" class="btn">Explore Cars</a>
+        </div>
+    </section>
+
+    <!-- Cars Section -->
+    <section id="cars" class="cars-section">
+        <h2>Our Cars</h2>
+        <div class="search-filter">
+            <input type="text" id="search" placeholder="Search for cars...">
+            <div class="filter">
+                <label for="price-range">Price Range:</label>
+                <select id="price-range">
+                    <option value="all">All</option>
+                    <option value="0-30000">$0 - $30,000</option>
+                    <option value="30001-45000">$30,001 - $45,000</option>
+                    <option value="45001-60000">$45,001 - $60,000</option>
+                </select>
+                <label for="rating">Rating:</label>
+                <select id="rating">
+                    <option value="all">All</option>
+                    <option value="4">4 stars & up</option>
+                    <option value="4.5">4.5 stars & up</option>
+                </select>
+            </div>
+        </div>
+        <div id="car-grid" class="car-grid">
+            <!-- Car Cards will be dynamically injected here -->
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <center><h2>Book Your Car</h2></center>
+        <form id="booking-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="car">Choose Car</label>
+            <select id="car" name="car">
+                <!-- Options will be dynamically injected here -->
+            </select>
+
+            <label for="date">Booking Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit" class="btn">Book Now</button>
+        </form>
+        <div id="confirmation-message" class="confirmation-message"></div>
+    </section>
+
+    <!-- Car Details Modal -->
+    <div id="car-details-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-details">&times;</span>
+            <div id="car-details">
+                <!-- Car details will be dynamically injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <p>&copy; 2024 Car Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
